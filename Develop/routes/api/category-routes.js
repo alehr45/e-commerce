@@ -64,20 +64,20 @@ router.put("/:id", (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
-Category.destroy({
+router.delete("/:id", (req, res) => {
+  Category.destroy({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbPostData => {
+    .then((categoryData) => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No post found with this id' });
+        res.status(404).json({ message: "No post found with this id" });
         return;
       }
       res.json(dbPostData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
