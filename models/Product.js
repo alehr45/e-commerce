@@ -1,15 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Product extends Model {}
+class Product extends Model { }
+
 
 Product.init(
   {
-    // define columns
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
+      allowNull: false,
       autoIncrement: true
     },
     product_name: {
@@ -37,7 +37,7 @@ Product.init(
         model: 'category',
         key: 'id'
       }
-    },
+    }
   },
   {
     sequelize,
@@ -47,4 +47,5 @@ Product.init(
     modelName: 'product',
   }
 );
+
 module.exports = Product;

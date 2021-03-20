@@ -45,19 +45,24 @@ const { Tag, Product, ProductTag } = require('../../models');
       });
   });
 
-  router.put("/:id", (req, res) => {
+  router.put('/:id', (req, res) => {
     Tag.update(
       {
-        tag_id: req.body.tag_id,
+        tag_name: req.body.tag_name
       },
       {
         where: {
-          id: req.params.id,
-        },
-      }
-    )
-      .then((tagData) => res.json(tagData))
-      .catch((err) => {
+          id: req.params.id
+        }
+      })
+      .then(tagData => {
+        if (!tagData) {
+          res.status(404).json({ message: 'No Tag found with that ID.' });
+          return;
+        }
+        res.json(tagData);
+      })
+      .catch(err => {
         console.log(err);
         res.status(500).json(err);
       });
