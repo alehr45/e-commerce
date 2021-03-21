@@ -8,7 +8,6 @@
 * [Installation](#installation)
 * [Contributors](#contributors)
 * [Testing](#Testing)
-* [Licensing](#Licenses)
 * [Contact](#questions)
 
 ========================
@@ -19,12 +18,19 @@ ecommerce-back-end
 ### **Description**  
 A database constructed to keep track of items. The user can search by category, product or tag to find details on merchandise. Products, categories and tags can also be created, updated and deleted from the database. Hope you enjoy!
 
+![Alt text](/screenshot.png?raw=true "Optional Title")
+
 ### **Installation**  
-Clone repository onto your local device. Log into mySQL and initiate database and schema. Run npm run seed to seed the database. Run npm start in console to start your server. All routes can be tested via Insomnia Core.
+##### Clone repository onto your local device. 
+##### Log into mySQL and initiate database and schema. 
+##### Run npm run seed to seed the database. 
+##### Run npm start in console to start your server. 
+##### All routes can be tested via Insomnia Core.
 
 ### **Usage**  
-To view, create, update, or delete merchandise in the database.
-![Alt text](/screenshot.png?raw=true "Optional Title")
+Video Walkthrough:
+https://drive.google.com/file/d/1_013dtPyASjJsVkFUclZ4ZtkiEp1Y_Nb/view
+
 
 ### **Contributors**  
 alehr45
